@@ -1,11 +1,13 @@
 # Co-folding vs physics-based docking
 
+![Top-1 success across three exposure levels: docking stays flat while co-folding falls from 95% on famous complexes to 27% on complexes released after the training cut-off](docs/cover.png)
+
 **Can AI co-folding models replace physics-based docking, and where do they fail?**
 
 This project benchmarks AI structure-prediction models that fold a protein
-*together with* its ligand (**Boltz-2**, **Chai-1**, **AlphaFold3**) against
-physics-based docking (**HADDOCK3**, **GNINA**, **AutoDock Vina**) on the same
-targets, and asks three questions of every pose:
+*together with* its ligand (**Boltz-2** blind and pocket-conditioned,
+**Chai-1**) against physics-based docking (**GNINA**, **AutoDock Vina**) on the
+same targets, and asks three questions of every pose:
 
 1. **Is it in the right place?** Pocket-aligned, symmetry-aware ligand RMSD
    (success = within 2 Å of the crystal pose).
@@ -15,7 +17,6 @@ targets, and asks three questions of every pose:
    (co-folding models sometimes produce broken or overlapping molecules).
 
 The docking half reuses my existing workflows:
-[haddock3-crossdocking](https://github.com/hankurt/haddock3-crossdocking),
 [gnina-ensemble-docking](https://github.com/hankurt/gnina-ensemble-docking),
 [autodockGPU-vina-docking](https://github.com/hankurt/autodockGPU-vina-docking),
 and the interaction analysis connects to
@@ -53,14 +54,13 @@ and the interaction analysis connects to
 data/candidates.csv ─┐
 cofoldbench search ──┴─cofoldbench fetch──▶ data/targets.csv + data/structures/
                                                │
-data/targets.csv ──cofoldbench inputs──▶ Boltz-2 YAML · Chai-1 FASTA · AF3 JSON
+data/targets.csv ──cofoldbench inputs──▶ Boltz-2 YAML · Chai-1 FASTA
         │                                        │ (GPU)
         │                                        ▼
-        │                              runs/boltz2 · runs/chai1 · runs/af3
+        │                                 runs/boltz2 · runs/chai1
         │                                        │
         ├─cofoldbench dockprep─▶ receptor · ligand · box
         │        scripts/run_docking.sh ─────────┤  GNINA / Vina
-        │   HADDOCK3 (existing repo) ────────────┤
         │                            cofoldbench collect  ──▶ results/manifest.csv
         │                                        │
         └────────────────────────────▶ cofoldbench evaluate ──▶ results/results.csv
@@ -101,9 +101,8 @@ installing the dependencies with conda itself: in a busy conda setup the
 solver can take a very long time.)
 
 The prediction tools each go in their own environment:
-`pip install boltz` (Boltz-2), `pip install chai_lab` (Chai-1), AlphaFold3 per
-its own instructions (model weights must be requested from Google DeepMind).
-All three need a CUDA GPU. GNINA and AutoDock Vina are single binaries:
+`pip install boltz` (Boltz-2) and `pip install chai_lab` (Chai-1). Both need a
+CUDA GPU. GNINA and AutoDock Vina are single binaries:
 `scripts/install_docking_tools.sh` puts them in `~/.local/bin`.
 
 **GPU troubleshooting** (all seen on a 12 GB RTX 4070 Ti, driver 535 / CUDA 12.2):
@@ -158,7 +157,7 @@ in the training set, so review the hits.
 ### 2. Write co-folding inputs
 
 ```bash
-cofoldbench inputs                # -> inputs/boltz/{blind,pocket}/  inputs/chai/  inputs/af3/
+cofoldbench inputs                # -> inputs/boltz/{blind,pocket}/  inputs/chai/
 ```
 
 ### 3. Predict (GPU)
@@ -167,7 +166,6 @@ cofoldbench inputs                # -> inputs/boltz/{blind,pocket}/  inputs/chai
 scripts/run_boltz.sh blind        # Boltz-2, 5 samples, then collects into the manifest
 scripts/run_boltz.sh pocket       # Boltz-2 with the pocket constraint
 scripts/run_chai.sh               # Chai-1
-cofoldbench collect af3 --results runs/af3     # after running AF3 on inputs/af3/*.json
 ```
 
 ### 4. Dock, then collect
@@ -180,7 +178,6 @@ scripts/run_docking.sh            # GNINA + Vina for every target, then collects
 Poses from the existing workflows are collected the same way:
 
 ```bash
-cofoldbench collect haddock3 --target 6DPT --run-dir path/to/haddock3/run
 cofoldbench collect gnina    --target 6DPT --receptor receptor.pdb --poses docked.sdf
 cofoldbench collect vina     --target 6DPT --receptor receptor.pdb --poses out.pdbqt
 cofoldbench collect single   --target 6DPT --structure pose.pdb --method my_method
@@ -230,7 +227,7 @@ profile.
 success, best-of-5 success, median top-1 RMSD, mean interaction recovery and
 pocket Cα RMSD. When `targets.csv` has release dates, every method also gets
 a *before cutoff* and an *after cutoff* row (`--cutoff`, default the Boltz-2
-cut-off 2023-06-01; Chai-1 2021-01-12, AF3 2021-09-30). `--exclude` leaves
+cut-off 2023-06-01; Chai-1 2021-01-12). `--exclude` leaves
 targets out of the comparison, e.g. ones a model could not run at all on the
 available GPU, so a hardware limit is not read as a modelling failure. Figures: success rates, RMSD cumulative distribution, and
 RMSD vs interaction recovery.
@@ -247,7 +244,7 @@ cofoldbench/
   superpose.py   sequence mapping + pocket superposition
   ligand.py      symmetry-aware RMSD, clash and ligand-integrity checks
   contacts.py    residue interaction fingerprints, recovery
-  inputs.py      Boltz-2 / Chai-1 / AF3 input writers
+  inputs.py      Boltz-2 / Chai-1 input writers
   dockprep.py    receptor / ligand / box (+ PDBQT) for GNINA and Vina
   collect.py     per-engine output readers -> manifest
   evaluate.py    score every pose
@@ -264,22 +261,29 @@ tests/           end-to-end tests on 6DPT
 
 ## Roadmap
 
+### Done
+
 - [x] Evaluation pipeline: pocket-aligned symmetric RMSD, interaction recovery, validity checks
-- [x] Input writers for Boltz-2 / Chai-1 / AF3; collectors for all six engines
+- [x] Input writers for Boltz-2 and Chai-1; collectors for every engine run here
 - [x] Tests on AmpC / H7M (6DPT)
 - [x] Target building from PDB IDs with ligand checks; time-split search; before/after cut-off report
 - [x] Docking inputs (SMILES conformer, shared pocket box) and GNINA / Vina run script
-- [x] Target set: 23 classic complexes + 16 released after the training cut-off
+- [x] Target set: 23 classic + 20 obscure pre-cut-off + 16 post-cut-off complexes
 - [x] Run Boltz-2 (blind + pocket), Chai-1, GNINA and Vina ([runbook](docs/RUNBOOK.md))
 - [x] Statistics: Wilson intervals, paired McNemar tests, before/after cut-off differences
-- [x] **[Write-up of the results](docs/RESULTS.md)**
 - [x] Control: obscure pre-cut-off targets, separating "heavily represented" from merely "seen"
+- [x] **[Write-up of the results](docs/RESULTS.md)**
+
+### Next
+
 - [ ] **Second docking seed**, to quantify run-to-run noise (`SEED=2 METHOD_SUFFIX=_s2`)
-- [ ] HADDOCK3 on the same targets
-- [ ] Metalloenzymes and cofactor sites: pass metals and cofactors to the co-folding inputs and keep them in the docking receptor (currently excluded, which rules out e.g. carbonic anhydrases)
 - [ ] Rebuild 9XHG (STING) with both chains of the dimer, or drop it
-- [ ] Cross-docking: receptors from apo or MD ensembles (from the metadynamics workflow), where docking suffers most
 - [ ] Full PLIP profiles on the aligned poses
+
+### Further out
+
+- [ ] **Cross-docking**: receptors from apo or MD ensembles (from the metadynamics workflow), where docking suffers most — the main limitation of this run
+- [ ] Metalloenzymes and cofactor sites: pass metals and cofactors to the co-folding inputs and keep them in the docking receptor (currently excluded, which rules out e.g. carbonic anhydrases)
 - [ ] Boltz-2 predicted affinity vs docking scores vs experimental affinities (affinities already collected)
 
 ---

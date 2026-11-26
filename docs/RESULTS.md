@@ -13,9 +13,9 @@ The target set is deliberately split in three:
 * **20 obscure complexes released 2015–2023**, also before the cut-off but
   ordinary and little-cited — the control that separates *heavily represented*
   from merely *seen*;
-* **16 complexes released after 2023-06-01**, the latest of the three
-  training cut-offs (Boltz-2; Chai-1 2021-01-12, AF3 2021-09-30). Most were
-  released in late 2026, weeks before the run.
+* **16 complexes released after 2023-06-01**, the later of the two training
+  cut-offs (Boltz-2; Chai-1 2021-01-12). Most were released in late 2026,
+  weeks before the run.
 
 ---
 
@@ -211,7 +211,7 @@ was measured, so the precision implied by a single number is optimistic
 separate methods).
 
 **8. Not yet analysed:** Boltz-2's predicted affinities (collected but
-unexamined), full PLIP interaction profiles, and HADDOCK3.
+unexamined) and full PLIP interaction profiles.
 
 ---
 

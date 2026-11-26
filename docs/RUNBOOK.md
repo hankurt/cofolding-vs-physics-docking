@@ -90,7 +90,7 @@ echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && exec bash   # if it 
 
 ```bash
 conda activate cofoldbench
-cofoldbench inputs          # Boltz YAML / Chai FASTA / AF3 JSON
+cofoldbench inputs          # Boltz YAML / Chai FASTA
 cofoldbench dockprep        # receptor, ligand (from SMILES), box, PDBQT
 ```
 
@@ -285,14 +285,6 @@ about missing poses for exactly this reason.
 > git add -f results/results.csv results/report
 > git commit -m "Benchmark results" && git push
 > ```
-
-### Optional
-
-* **HADDOCK3**: run with [haddock3-crossdocking](https://github.com/hankurt/haddock3-crossdocking)
-  on `inputs/dock/<target>/receptor.pdb` + `ligand.sdf`, then
-  `cofoldbench collect haddock3 --target <ID> --run-dir <run>`.
-* **AlphaFold3**: needs weights from Google DeepMind and ~600 GB of sequence
-  databases; inputs are in `inputs/af3/`. Not planned on this PC.
 
 ---
 
