@@ -21,6 +21,7 @@ FG = "#e6edf3"
 MUTED = "#8b949e"
 GRID = "#262d36"
 COFOLD = "#ff7b72"
+COFOLD_P = "#ffa198"
 COFOLD2 = "#d29922"
 DOCK = "#3fb950"
 DOCK2 = "#58a6ff"
@@ -28,11 +29,13 @@ DOCK2 = "#58a6ff"
 levels = ["famous\npre-cut-off", "obscure\npre-cut-off", "after\ncut-off"]
 x = np.arange(3)
 
+# label, values, colour, marker, linewidth, linestyle
 series = [
-    ("Boltz-2 (co-folding)", [95, 70, 27], COFOLD, "o", 2.8),
-    ("Chai-1 (co-folding)", [85, 50, 27], COFOLD2, "o", 2.2),
-    ("GNINA (docking)", [75, 70, 73], DOCK, "s", 2.8),
-    ("AutoDock Vina (docking)", [60, 65, 47], DOCK2, "s", 2.2),
+    ("Boltz-2 (co-folding)", [95, 70, 27], COFOLD, "o", 2.8, "-"),
+    ("Boltz-2 pocket (co-folding)", [95, 80, 27], COFOLD_P, "o", 2.0, (0, (5, 2))),
+    ("Chai-1 (co-folding)", [85, 50, 27], COFOLD2, "o", 2.2, "-"),
+    ("GNINA (docking)", [75, 70, 73], DOCK, "s", 2.8, "-"),
+    ("AutoDock Vina (docking)", [60, 65, 47], DOCK2, "s", 2.2, "-"),
 ]
 
 
@@ -52,9 +55,9 @@ fig, ax = plt.subplots(figsize=(12.8, 6.4), dpi=100)
 fig.patch.set_facecolor(BG)
 style(ax)
 
-for label, ys, c, m, lw in series:
-    ax.plot(x, ys, color=c, lw=lw, marker=m, ms=10, mec=BG, mew=1.5, label=label,
-            zorder=3)
+for label, ys, c, m, lw, ls in series:
+    ax.plot(x, ys, color=c, lw=lw, ls=ls, marker=m, ms=10, mec=BG, mew=1.5,
+            label=label, zorder=3)
 
 ax.set_xticks(x)
 ax.set_xticklabels(levels, color=FG, fontsize=12)
@@ -65,8 +68,13 @@ ax.set_yticklabels(["0%", "25%", "50%", "75%", "100%"])
 ax.set_ylabel("top-1 success  (ligand RMSD ≤ 2 Å)", color=MUTED, fontsize=12,
               labelpad=10)
 
-label_y = {"Boltz-2 (co-folding)": 31, "Chai-1 (co-folding)": 21}
-for label, ys, c, m, lw in series:
+# Boltz-2, Boltz-2 pocket and Chai-1 all land on 27%; fan the labels out.
+label_y = {
+    "Boltz-2 (co-folding)": 36,
+    "Boltz-2 pocket (co-folding)": 26,
+    "Chai-1 (co-folding)": 16,
+}
+for label, ys, c, m, lw, ls in series:
     ax.annotate(label, (2, label_y.get(label, ys[2])), xytext=(12, 0),
                 textcoords="offset points", color=c, fontsize=11.5,
                 va="center")
@@ -85,9 +93,9 @@ plt.close(fig)
 fig, ax = plt.subplots(figsize=(12.8, 6.4), dpi=100)
 fig.patch.set_facecolor(BG)
 style(ax)
-w = 0.2
-for i, (label, ys, c, m, lw) in enumerate(series):
-    pos = x + (i - 1.5) * w
+w = 0.17
+for i, (label, ys, c, m, lw, ls) in enumerate(series):
+    pos = x + (i - 2) * w
     bars = ax.bar(pos, ys, width=w * 0.88, color=c, label=label, zorder=3)
     for b, v in zip(bars, ys):
         ax.text(b.get_x() + b.get_width() / 2, v + 2, f"{v}%", ha="center",
