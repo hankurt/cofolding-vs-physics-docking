@@ -65,7 +65,7 @@ ax.set_xlim(-0.35, 2.75)
 ax.set_ylim(0, 105)
 ax.set_yticks([0, 25, 50, 75, 100])
 ax.set_yticklabels(["0%", "25%", "50%", "75%", "100%"])
-ax.set_ylabel("top-1 success  (ligand RMSD ≤ 2 Å)", color=MUTED, fontsize=12,
+ax.set_ylabel("binding pose correct  (within 2 Å)", color=MUTED, fontsize=12,
               labelpad=10)
 
 # Boltz-2, Boltz-2 pocket and Chai-1 all land on 27%; fan the labels out.
@@ -79,13 +79,15 @@ for label, ys, c, m, lw, ls in series:
                 textcoords="offset points", color=c, fontsize=11.5,
                 va="center")
 
+# Title sits high enough to leave a clear gap above the subtitle, which stays
+# just above the axes.
 ax.set_title("AI co-folding vs physics-based docking",
-             color=FG, fontsize=22, fontweight="bold", loc="left", pad=28)
-ax.text(0, 1.045, "Docking is flat. Co-folding falls off a cliff on structures it has not seen.",
+             color=FG, fontsize=22, fontweight="bold", loc="left", pad=34)
+ax.text(0, 1.035, "Docking is flat. Co-folding falls off a cliff on structures it has not seen.",
         transform=ax.transAxes, color=MUTED, fontsize=13)
 fig.text(0.062, 0.025, "59 targets  ·  5 methods  ·  1437 poses  ·  one RTX 4070 Ti",
          color=MUTED, fontsize=11)
-fig.tight_layout(rect=[0.02, 0.05, 1, 0.94])
+fig.tight_layout(rect=[0.02, 0.05, 1, 0.93])
 fig.savefig(OUT + "cover.png", facecolor=BG)
 plt.close(fig)
 
@@ -106,7 +108,7 @@ ax.set_xticklabels(levels, color=FG, fontsize=12)
 ax.set_ylim(0, 110)
 ax.set_yticks([0, 25, 50, 75, 100])
 ax.set_yticklabels(["0%", "25%", "50%", "75%", "100%"])
-ax.set_ylabel("top-1 success  (ligand RMSD ≤ 2 Å)", color=MUTED, fontsize=12,
+ax.set_ylabel("binding pose correct  (within 2 Å)", color=MUTED, fontsize=12,
               labelpad=10)
 leg = ax.legend(frameon=False, loc="upper right", ncol=2, fontsize=11,
                 labelcolor=FG)
@@ -139,7 +141,7 @@ ax.set_xlim(-0.3, 2.3)
 ax.set_ylim(0, 108)
 ax.set_yticks([0, 25, 50, 75, 100])
 ax.set_yticklabels(["0%", "25%", "50%", "75%", "100%"])
-ax.set_ylabel("top-1 success", color=MUTED, fontsize=13, labelpad=10)
+ax.set_ylabel("binding pose correct", color=MUTED, fontsize=13, labelpad=10)
 ax.set_title("Does the model know it,\nor did it memorise it?", color=FG,
              fontsize=24, fontweight="bold", loc="left", pad=26)
 fig.text(0.1, 0.03, "cofolding-vs-physics-docking  ·  59 targets, 1437 poses",

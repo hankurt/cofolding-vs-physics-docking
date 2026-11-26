@@ -1,6 +1,6 @@
 # Co-folding vs physics-based docking
 
-![Top-1 success across three exposure levels: docking stays flat while co-folding falls from 95% on famous complexes to 27% on complexes released after the training cut-off](docs/cover.png)
+![Share of targets with the binding pose correct, across three exposure levels: docking stays flat while co-folding falls from 95% on famous complexes to 27% on complexes released after the training cut-off](docs/cover.png)
 
 **Can AI co-folding models replace physics-based docking, and where do they fail?**
 
