@@ -1,0 +1,13 @@
+__pycache__/
+*.egg-info/
+.pytest_cache/
+# Generated: model inputs, raw predictions, results
+inputs/
+runs/
+results/
+# Downloaded mmCIF / CCD files (cofoldbench fetch cache)
+data/raw/
+# Raw `cofoldbench search` hits to review; the curated set is data/candidates_recent.csv
+data/candidates_search*.csv
+data/candidates_recent2.csv
+logs/

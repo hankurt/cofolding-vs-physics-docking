@@ -1,0 +1,61 @@
+pdb_id,chain,ligand_resname,protein,ligand_name,release_date,resolution,length,set
+12GC,A,A1DB3,Lysozyme C,eosin b,2026-11-25,1.85,129,recent
+22CZ,A,A1AA0,3C-like proteinase nsp5,"4,6,7-trifluoro-n-{(2s)-1-[(3r,5'r)-5'-(iminomethyl)-2-oxo-1,2-dihydrospiro[indole-3,3'-pyrrolidin]-1'-yl]-4-methyl-1-oxopentan-2-yl}-n-methyl-1h-indole-2-carboxamide",2026-11-25,1.52949179278,306,recent
+24JW,A,CEF,Beta-lactamase,"cefotaxime, c3' cleaved, open, bound form",2026-11-25,1.2,364,recent
+29IA,A,A1J2Q,NAD-dependent protein deacetylase sirtuin-2,"(2~{s})-2-acetamido-6-azanyl-~{n}-[(2~{s})-1-azanyl-6-[(3-dodecylsulfanyl-2,2-dimethyl-propanethioyl)amino]-1-oxidanylidene-hexan-2-yl]hexanamide",2026-11-25,1.4,304,recent
+31HU,A,A1J9Q,Monoglyceride lipase,"[6-(3-chloranyl-4-fluoranyl-phenyl)-5-methyl-3,4-dihydro-1~{h}-isoquinolin-2-yl]-[2-chloranyl-3-[2,2,2-tris(fluoranyl)ethoxy]phenyl]methanone",2026-11-25,1.58,323,recent
+33GK,A,A1KNO,"Peptidoglycan D,D-transpeptidase FtsI","(2~{s},3~{r},4~{r})-2-[(2~{s},3~{r})-1,3-bis(oxidanyl)-1-oxidanylidene-butan-2-yl]-4-[[(7~{s})-1$l^{4},3,5-triazabicyclo[3.3.0]octa-1,3-dien-7-yl]sulfanyl]-3-methyl-3,4-dihydro-2~{h}-pyrrole-5-carboxylic acid",2026-11-25,1.9,517,recent
+35XE,A,A1DIK,"Endolysin, DCN1-like protein 1 fusion",n-[1-(butane-1-sulfonyl)piperidin-4-yl]-n-(cyclobutylmethyl)isoquinoline-3-carboxamide,2026-11-25,1.49,384,recent
+9QY2,A,A1JB8,Glycylpeptide N-tetradecanoyltransferase 1,"4-[2-[6-[(~{e})-[3-[(dimethylamino)methyl]-1,5-dimethyl-pyrazol-4-yl]diazenyl]-2,3-bis(fluoranyl)phenoxy]ethyl]-~{n},~{n},1,5-tetramethyl-pyrazole-3-carboxamide",2026-11-25,1.98,410,recent
+9T9B,AAA,A1JUK,Carbonic anhydrase 2,"4-[(2~{r},5~{s})-4,5-dimethyl-2-(phenylmethyl)piperazin-1-yl]carbonylbenzenesulfonamide",2026-11-25,1.4,260,recent
+9T9K,A,AR6,NAD-dependent protein deacylase sirtuin-6,"[(2r,3s,4r,5r)-5-(6-aminopurin-9-yl)-3,4-dihydroxy-oxolan-2-yl]methyl[hydroxy-[[(2r,3s,4r,5s)-3,4,5-trihydroxyoxolan-2-yl]methoxy]phosphoryl] hydrogen phosphate",2026-11-25,1.29,288,recent
+9UY8,A,A1ET0,G-type lectin S-receptor-like serine/threonine-protein kinase At1g11330,"(2~{s},3~{r},4~{e},8~{e})-2-azanyl-9-methyl-octadeca-4,8-diene-1,3-diol",2026-11-25,2.0,445,recent
+9Z4S,A,A1C0W,"Caspase-2 subunit p13,Caspase-2","(5s)-6-({(2s)-1-[(1r,2s,5s)-2-{[(2s)-1-carboxy-3-hydroxypropan-2-yl]carbamoyl}-6,6-dimethyl-3-azabicyclo[3.1.0]hexan-3-yl]-3-methyl-1-oxobutan-2-yl}amino)-5-{[(2s)-2-methyl-2,3-dihydro-1h-indole-2-carbonyl]amino}-6-oxohexanoic acid (non-preferred name)",2026-11-25,1.61,282,recent
+9ZBG,A,A1C1D,E3 ubiquitin-protein ligase CBL-B,"2-cyclopropyl-6-methyl-n-(3-{3-[(4-methyl-4h-1,2,4-triazol-3-yl)methyl]oxetan-3-yl}phenyl)pyrimidine-4-carboxamide",2026-11-25,2.0,392,recent
+9ZG2,A,A1DEV,Three-prime repair exonuclease 1,"(6m)-2-[4-(3,4-difluorophenyl)-4-hydroxypiperidin-1-yl]-6-(1,3-dimethyl-1h-pyrazol-4-yl)pyridine-4-carboxamide",2026-11-25,1.93,250,recent
+28WA,A,A1J0X,PA-I galactophilic lectin,2-hydroxybenzoic acid beta-d-galactoside,2026-11-18,1.5,121,recent
+31FN,A,A1J9A,Carbonic anhydrase 1,4-[[(2~{z})-2-hydroxyimino-2-phenyl-ethyl]amino]benzenesulfonamide,2026-11-18,1.55,261,recent
+31FR,A,A1J88,Carbonic anhydrase 13,4-(2-ethylsulfanyl-4-phenyl-imidazol-1-yl)benzenesulfonamide,2026-11-18,1.3,263,recent
+46BX,A,A1LZO,Single-chain Fv antibody of 9TG,n-[(4-hydroxy-3-nitrophenyl)acetyl]glycine,2026-11-18,1.24,247,recent
+9ONT,A,IHP,Myo-inositol hexaphosphate phosphohydrolase,inositol hexakisphosphate,2026-11-18,1.95,340,recent
+9YH2,B,PNS,"Non-ribosomal peptide synthase:Amino acid adenylation,Thioesterase",4'-phosphopantetheine,2026-11-18,2.0,351,recent
+9TZS,A,A1JYD,YD repeat-containing protein,"(1r,3r,6s)-18-methoxy-3-methyl-17-oxatricyclo[13.2.1.0^{1,6}]octadeca-4,7,15(18)-triene-9,14,16-trione",2026-11-25,1.43,132,recent
+25UE,A,UV3,Iron-containing redox enzyme family protein,7-bromo-l-tryptophan,2026-11-18,1.94,248,recent
+35FR,A,A1KVX,Adenosine 5'-monophosphoramidase HINT1,"[(2~{s},6~{r})-6-(6-aminopurin-9-yl)-4-(2-oxidanylideneethyl)morpholin-2-yl]methyl dihydrogen phosphate",2026-11-11,1.72,126,recent
+37LW,A,IMP,KomA,inosinic acid,2026-11-11,1.97,328,recent
+44HW,A,A1FDM,Glutaminyl-peptide cyclotransferase,~{n}-cyclopropyl-4-[2-[2-(5-methylimidazol-1-yl)ethylamino]-5-(trifluoromethyl)pyrimidin-4-yl]benzamide,2026-11-11,1.84,329,recent
+9T3U,A,A1JTE,Bifunctional epoxide hydrolase 2,"1-[1-[5-[(6-chloranyl-1,2,3,4-tetrahydroacridin-9-yl)amino]pentanoyl]piperidin-4-yl]-3-(4-methylsulfonylphenyl)urea",2026-11-11,2.0,344,recent
+9VSB,A,A1ETH,YTH domain-containing protein 1,"2-[3-[4-[[2-chloranyl-6-(methylamino)purin-9-yl]methyl]-1,2,3-triazol-1-yl]phenyl]ethanoic acid",2026-11-11,1.8,187,recent
+9XIJ,A,45D,Crustacyanin-like lipocalin,"beta,beta-carotene-4,4'-dione",2026-11-11,1.76,207,recent
+9XJQ,A,A1E0I,WD repeat-containing protein 5,"2,4-bis(chloranyl)-~{n}-(5-ethynylthiophen-2-yl)sulfonyl-benzamide",2026-11-11,1.51,304,recent
+13CY,A,CMP,DUF190,"adenosine-3',5'-cyclic-monophosphate",2026-11-04,1.935,122,recent
+15AB,A,A1DV3,Non-structural protein 3,1-{[6-(3-fluoroanilino)pyrimidin-4-yl]amino}pyrrolidin-2-one,2026-11-04,1.02,169,recent
+32TH,A,A1KFC,YTH domain-containing family protein 2,"methyl 4-(6-cyclopropyl-4-oxidanylidene-pyrazolo[3,4-b]pyridin-3-yl)benzoate",2026-11-11,1.68,167,recent
+30GE,A,A1J6Q,Amidase,2-(2-(2-methoxyethoxy)ethoxy)ethyl hydrogen (4-benzylphenyl)phosphoramidate,2026-11-04,1.5,433,recent
+30HL,A,A1J6J,Phosphoribosyl isomerase A,[3-[5-methyl-4-[2-[2-methyl-5-(3-phosphonooxyphenyl)thiophen-3-yl]cyclopenten-1-yl]thiophen-2-yl]phenyl] dihydrogen phosphate,2026-11-04,1.95,244,recent
+30TV,A,A1J7V,Carboxylic ester hydrolase,~{n}-[2-(2-methoxyethoxy)ethoxyphosphonoyl]-4-(phenylmethyl)aniline,2026-11-04,1.44,530,recent
+37OC,A,A1DQE,Serine/threonine-protein kinase PLK4,"(7r)-n-{3-[1-(2-fluoro-2-methylpropyl)-1h-pyrazolo[4,3-c]pyridin-6-yl]-1h-pyrazol-4-yl}-7-hydroxy-7-(trifluoromethyl)-4-azaspiro[2.5]octane-4-carboxamide",2026-11-04,1.69,278,recent
+37TG,A,A1AEP,Diadenylate cyclase PanS,3'3'-cump-amp,2026-11-04,1.99,146,recent
+39JO,A,P6G,Peptidase M24 family protein,hexaethylene glycol,2026-11-04,1.75,366,recent
+9T15,B,A1JSY,Bromodomain-containing protein 4,"~{n}-[2,4-bis(oxidanyl)phenyl]-2-[(2~{r})-5-oxidanylidenepyrrolidin-2-yl]ethanamide",2026-11-04,1.214,148,recent
+9T1T,A,A1JS0,Tyrosine-protein kinase BTK,"(6~{r})-6-(2-bromanyl-6-chloranyl-phenyl)-4,5,6,7-tetrahydro-1-benzofuran-3-carboxylic acid",2026-11-04,1.961,169,recent
+9XHG,A,1IL,Stimulator of interferon genes protein,3-[(4-tert-butylphenyl)carbonylamino]-5-chloranyl-1-benzofuran-2-carboxylic acid,2026-11-04,1.47623845179,192,recent
+9YV2,A,A1CZA,DDB1- and CUL4-associated factor 1,"(4p,5m)-n-[(1s)-3-amino-1-(3-chloro-4-fluorophenyl)-3-oxopropyl]-4-(4-chloro-2-fluorophenyl)-5-[1-(piperidin-4-yl)-1h-pyrazol-4-yl]-1h-pyrrole-3-carboxamide",2026-11-04,1.67,315,recent
+12YZ,A,GRG,Geranylgeranyl pyrophosphate synthase,geranylgeranyl diphosphate,2026-10-28,1.82,294,recent
+13FI,B,ADN,TK0807,adenosine,2026-10-28,1.61,386,recent
+27ON,A,UDP,KfiA protein,uridine-5'-diphosphate,2026-10-28,1.68,213,recent
+39PS,A,C5P,Cytidylate kinase,cytidine-5'-monophosphate,2026-10-28,1.95,228,recent
+43EA,A,LBH,Histone deacetylase HosB,panobinostat,2026-10-28,1.98,595,recent
+45TX,A,A1MJY,FAST-DM,"(5~{z})-5-[(3,5-dimethyl-4-oxidanyl-phenyl)methylidene]-2-sulfanylidene-1,3-thiazolidin-4-one",2026-10-28,1.66,124,recent
+9QVY,A,M1P,GT108 family enzyme,1-o-phosphono-alpha-d-mannopyranose,2026-10-28,1.41,346,recent
+9QY6,A,A1JB5,1-deoxy-D-xylulose-5-phosphate synthase,~{n}-[3-chloranyl-4-(4-chloranylphenoxy)phenyl]-3-piperidin-4-yl-propanamide,2026-10-28,1.91,622,recent
+9SYK,A,A1JRY,tRNA (cytosine(38)-C(5))-methyltransferase,"(2~{s})-4-[[(2~{r},3~{s},4~{r},5~{r})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methyl-[[4-[oxidanyl(oxidanylidene)-$l^{4}-azanyl]-3-(trifluoromethyl)phenyl]methyl]amino]-2-azanyl-butanoic acid",2026-10-28,1.8,348,recent
+9SYO,A,A1JR1,Heat shock protein HSP 90-alpha,"~{n}-[3,5-bis(oxidanyl)phenyl]-2-(1~{h}-indol-2-ylsulfanyl)ethanamide",2026-10-28,1.29,228,recent
+9T51,A,A1JTM,StAR-related lipid transfer protein 4,"~{tert}-butyl 4-[(4~{a}~{s},12~{b}~{s})-12~{b}-methyl-3-oxidanyl-2,3,4,4~{a},5,6-hexahydro-1~{h}-naphtho[1,2-b]quinolin-8-yl]piperidine-1-carboxylate",2026-10-28,1.64,205,recent
+9TEC,A,A1JVM,cAMP-dependent protein kinase catalytic subunit alpha,"4-[3-(1,2,4-triazol-1-ylmethyl)phenyl]-1~{h}-pyrrolo[2,3-b]pyridine",2026-10-28,1.38,339,recent
+9ZG6,A,GMP,Signal recognition particle 54 kDa protein,guanosine,2026-10-28,1.3,316,recent
+9ZRW,A,A1C33,Alpha-1-antitrypsin,"n-[(1s,2r)-1-(2-chloro-3-fluorophenyl)-1-hydroxypentan-2-yl]-7-fluoro-2-oxo-2,3-dihydro-1h-indole-4-carboxamide",2026-10-28,1.87,404,recent
+20YD,A,A1E18,Threonine--tRNA ligase,"(2~{s},3~{r})-2-[[2,3-bis(oxidanyl)phenyl]carbonylamino]-4-(4-methoxyphenyl)-3-oxidanyl-butanoic acid",2026-10-21,1.9,410,recent
+21FM,A,UMP,"Deoxyuridine 5'-triphosphate nucleotidohydrolase, mitochondrial",2'-deoxyuridine 5'-monophosphate,2026-10-21,1.31,161,recent
+24FX,A,A1EKG,Verruculogen synthase,~{n}-[(4-hydroxyphenyl)methyl]-~{n}-[2-(4-methoxyphenyl)ethyl]morpholine-4-carboxamide,2026-10-21,1.65,285,recent
+28NK,A,A1JZE,Phosphopantetheine adenylyltransferase,3-[3-(3-aminophenyl)indol-1-yl]propanoic acid,2026-10-21,1.73,162,recent

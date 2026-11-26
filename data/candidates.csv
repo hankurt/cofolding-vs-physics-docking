@@ -1,0 +1,33 @@
+# Classic protein-ligand complexes (drugs and tool compounds), all released long
+# before the models' training cut-offs: the set where memorisation can help them.
+# `cofoldbench fetch data/candidates.csv` downloads and checks each one; entries
+# that fail a check (wrong ligand code, unmodelled atoms ...) are reported and skipped.
+# The time-split set comes from `cofoldbench search` (data/candidates_recent.csv).
+# chain: receptor chain(s); empty = every chain lining the pocket.
+pdb_id,chain,ligand_resname,protein,ligand_name,set
+1HSG,A B,MK1,HIV-1 protease,indinavir,classic
+1STP,A,BTN,streptavidin,biotin,classic
+1M17,A,AQ4,EGFR kinase,erlotinib,classic
+1IEP,A,STI,ABL kinase,imatinib,classic
+2GQG,A,1N1,ABL kinase,dasatinib,classic
+3OG7,A,032,BRAF V600E kinase,vemurafenib,classic
+2XP2,A,VGH,ALK kinase,crizotinib,classic
+1AQ1,A,STU,CDK2,staurosporine,classic
+1KV2,A,B96,p38 MAP kinase,BIRB-796,classic
+3MXF,A,JQ1,BRD4 bromodomain 1,(+)-JQ1,classic
+1YET,A,GDM,HSP90 N-terminal domain,geldanamycin,classic
+3ERT,A,OHT,estrogen receptor alpha LBD,4-hydroxytamoxifen,classic
+2PRG,A,BRL,PPAR-gamma LBD,rosiglitazone,classic
+1UDT,A,VIA,PDE5 catalytic domain,sildenafil,classic
+3LN1,A,CEL,COX-2,celecoxib,classic
+1EVE,A,E20,acetylcholinesterase,donepezil,classic
+2HU4,A,G39,influenza neuraminidase N1,oseltamivir carboxylate,classic
+1VRT,A,NVP,HIV-1 reverse transcriptase p66,nevirapine,classic
+2P16,A,GG2,factor Xa,apixaban,classic
+1OYT,H,FSN,thrombin,benzamidine-type inhibitor,classic
+6O0K,A,LBM,BCL-2,venetoclax,classic
+3PTB,,BEN,trypsin,benzamidine,classic
+# 7SI9 (nirmatrelvir) is left out: it binds Cys145 covalently, which no non-covalent
+# docking program and no co-folding model can reproduce, so it penalises every method
+# for a reason unrelated to pose prediction. `fetch` warns about such ligands.
+#7SI9,A,4WI,SARS-CoV-2 main protease,nirmatrelvir (covalent),classic

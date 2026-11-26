@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cofoldbench"
+version = "0.1.0"
+description = "Benchmark AI co-folding (Boltz-2, Chai-1, AlphaFold3) against physics-based docking"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pandas",
+    "gemmi>=0.6",
+    "rdkit>=2023.9",
+    "matplotlib",
+]
+
+[project.optional-dependencies]
+test = ["pytest", "scipy"]
+# receptor hydrogens and PDBQT files for Vina / GNINA (`cofoldbench dockprep`)
+dock = ["meeko>=0.5", "openbabel-wheel"]
+
+[project.scripts]
+cofoldbench = "cofoldbench.cli:main"
+
+[tool.setuptools]
+packages = ["cofoldbench"]

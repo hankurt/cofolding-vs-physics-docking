@@ -1,0 +1,33 @@
+# Time-split targets: X-ray complexes released after every model's training
+# cut-off (Boltz-2: 2023-06-01). Curated from `cofoldbench search --after
+# 2023-06-01 --n 45`, keeping real drug-like ligands in diverse proteins.
+#
+# Left out of the search hits, and why:
+#   22CZ 24JX 9Z4S  covalent ligand (Mpro/Cys145, beta-lactamase/Ser64, caspase-2/Cys269)
+#   30GE 30TV       phosphoramidates: covalent serine-hydrolase inhibitors
+#   9T9A 31FN 31FQ 31FS 44HW 25UE  catalytic metal in the pocket (Zn, Fe), which the
+#                   co-folding inputs and the docking receptor both omit
+#   9QY2 9ZG2       need a cofactor next to the ligand (myristoyl-CoA, Mg)
+#   39JO            "ligand" is hexaethylene glycol, a crystallisation additive
+#   9ONT 9YH2 12YZ 13CY 13FI 37LW 35FP 37TG  substrates/nucleotides, not drug-like
+#   9VSB            same YTH domain family as 32TH
+#
+# 9T15 (BRD4) is deliberately kept although 3MXF is also BRD4: the same protein
+# before and after the cut-off is a controlled test of memorisation.
+pdb_id,chain,ligand_resname,protein,ligand_name,set
+29IA,A,A1J2Q,sirtuin-2,myristoyl-lysine peptide analogue,recent
+31HU,A,A1J9Q,monoglyceride lipase,isoquinoline inhibitor,recent
+35XE,A,A1DIK,DCN1-like protein 1 (endolysin fusion),isoquinoline-3-carboxamide,recent
+9T9K,A,AR6,sirtuin-6,ADP-ribose,recent
+9TZS,A,A1JYD,YD repeat-containing protein,macrocyclic natural product,recent
+9UY8,A,A1ET0,lectin S-receptor-like kinase At1g11330,sphingoid base,recent
+9ZBG,A,A1C1D,E3 ubiquitin-protein ligase CBL-B,pyrimidine-4-carboxamide,recent
+37OC,A,A1DQE,PLK4 kinase,azaspirooctane carboxamide,recent
+9T1T,,A1JS0,BTK kinase,tetrahydrobenzofuran carboxylic acid,recent
+9T15,B,A1JSY,BRD4 bromodomain,dihydroxyphenyl pyrrolidinone,recent
+9YV2,A,A1CZA,DCAF1,pyrrole-3-carboxamide,recent
+9XJQ,A,A1E0I,WD repeat-containing protein 5 (WDR5),dichlorobenzamide sulfonamide,recent
+32TH,A,A1KFC,YTHDF2 YTH domain,pyrazolopyridinone benzoate,recent
+15AB,A,A1DV3,non-structural protein 3 macrodomain,aminopyrimidine pyrrolidinone,recent
+9XHG,A,1IL,STING,benzofuran-2-carboxylic acid,recent
+9T3U,A,A1JTE,soluble epoxide hydrolase,piperidinyl urea,recent

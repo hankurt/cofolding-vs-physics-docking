@@ -1,0 +1,12 @@
+# Evaluation environment (no GPU needed). Conda only provides Python; every
+# package comes from pip wheels, so there is nothing for conda to solve.
+# The prediction and docking tools each live in their own environment - see README.
+name: cofoldbench
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - -e .[test,dock]

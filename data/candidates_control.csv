@@ -1,0 +1,58 @@
+# Pre-cut-off CONTROL set: obscure complexes released 2015-2023 (before the
+# Boltz-2 cut-off 2023-06-01), curated from `cofoldbench search --after
+# 2015-01-01 --before 2023-06-01 --n 40`.
+#
+# Why this set exists: the 23 "classic" targets are not merely in the training
+# data, they are in it many times over (every benchmark, every tutorial,
+# redundant entries). That confounds *seen in training* with *famous and
+# heavily represented*. These are ordinary, little-cited structures from the
+# same era. If the co-folding models score as well here as on the classics,
+# plain exposure is enough; if they score much worse, fame was doing part of
+# the work.
+#
+# MATCHED PAIRS - the strongest comparison in the whole benchmark, because
+# protein identity and chemotype are held fixed and only the release date
+# changes:
+#   8FLH (BTK, 2023-03)    <-> 9T1T (BTK, 2026-11)
+#   8F8E (DCAF1, 2023-03)  <-> 9YV2 (DCAF1, 2026-11), near-identical chemotype
+#   3MXF (BRD4, 2010)      <-> 9T15 (BRD4, 2026-11)
+#
+# Left out of the 40 search hits, and why:
+#   4ZA4 6ZCV 6UOI   ligand is a cofactor (prenyl-FMN, PQQ, Fe3S4 cluster)
+#   6UO4 7Z6Z 7YZH   catalytic metal in the pocket (HDAC6 Zn, ACE Zn, CA Zn)
+#   6I8W             ligand is octyl glucopyranoside, a detergent
+#   5FA7             ring-opened avibactam-type adduct: covalent
+#   5FYX             NCS1 is a Ca-binding protein; metal risk
+#   4XTU 5TPU 6PGL 6XFI 7NUT 6S2B 6YR3 8D5I 6YN2   substrates and nucleotides,
+#                    not drug-like ligands
+#   5D24 6AVK 6PG5 7UJC   protein already in the set (BRD4, streptavidin,
+#                    WDR5, estrogen receptor); 7UJC is also a famous drug
+# Dropped after fetching, on the structural checks (decided before any pose was
+# scored, so no outcome-dependent selection):
+#   4TQ8  transthyretin: the thyroxine site is in the central channel at a
+#         dimer-dimer interface built by crystallographic symmetry
+#   7Q7U  BCL6: the inhibitor binds a groove formed by both monomers of the
+#         obligate BTB dimer, the partner here being a symmetry image
+#   5DU4  enoyl-CoA hydratase: oligomeric, active site at a subunit interface
+#   5T4V  BRPF1: 28% of contacts from a neighbour; kept out for consistency
+#         with the other three rather than judged case by case
+#   5LP1  failed the ligand graph check (crystal connectivity != CCD SMILES)
+pdb_id,chain,ligand_resname,protein,ligand_name,set
+4UNR,,QZE,thymidylate kinase,benzoquinoline benzoic acid,pre-cutoff
+4ZJI,,4OQ,PAK1 kinase,dibenzodiazepine,pre-cutoff
+4TQ8,,7BD,transthyretin,fluorenylideneamino-oxy propanoic acid,pre-cutoff
+4YAD,,4A7,TIF1-alpha bromodomain,dimethoxy benzenesulfonamide,pre-cutoff
+5AMJ,,EF2,cereblon isoform 4,S-thalidomide,pre-cutoff
+5DU4,,5FF,enoyl-CoA hydratase EchA6,tetrahydropyrazolopyrimidine carboxamide,pre-cutoff
+5HZ5,,65X,fatty acid-binding protein 5,tetrazolyl quinoline,pre-cutoff
+5LP1,,71H,Lp-PLA2 (PLA2G7),cyclopenta-pyrimidinone ethanamide,pre-cutoff
+5T4V,,N48,BRPF1 bromodomain,cyano benzenesulfonamide,pre-cutoff
+6D6A,,FXD,LasR transcriptional activator,dibromophenyl benzoate,pre-cutoff
+6T7P,,MU8,plasma kallikrein,phenyl pyrrolidine carboxamide,pre-cutoff
+6RSB,,KGZ,JAK1 kinase,fluoropiperidinyl pyrazole carboxamide,pre-cutoff
+5R4P,,RVY,CPSF5 (NUDT21),triazolylmethyl pyrrolidinedione,pre-cutoff
+6YTG,,KHC,CLK1 kinase,spiropiperidine carbonitrile,pre-cutoff
+6LU5,,EUO,BPTF bromodomain,indolyl methylsulfonyl pyrimidinamine,pre-cutoff
+7Q7U,,9IE,BCL6,oxazepino-quinolinone amino pyridine carbonitrile,pre-cutoff
+8F8E,,XJI,DCAF1 (pairs with 9YV2),pyrazole-4-carboxamide,pre-cutoff pair
+8FLH,,Y8H,BTK kinase (pairs with 9T1T),pyrrolopyrimidinyl azepane,pre-cutoff pair
