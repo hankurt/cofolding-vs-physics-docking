@@ -1,17 +1,22 @@
 | method | subset | n_targets | n_missing | top1_success | top1_success_valid | top5_success | top1_median_rmsd | top1_recovery_all | top1_recovery_polar | top1_pocket_ca_rmsd | n_errors |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| gnina | all | 36 | 0 | 72% | 72% | 86% | 1.33 | 83% | 84% | 0.00 | 0 |
-| boltz2 | all | 36 | 0 | 64% | 64% | 67% | 0.89 | 83% | 80% | 0.45 | 0 |
-| boltz2_pocket | all | 36 | 0 | 64% | 64% | 72% | 1.07 | 88% | 77% | 0.47 | 0 |
-| chai1 | all | 36 | 0 | 58% | 58% | 61% | 1.21 | 80% | 74% | 0.57 | 0 |
-| vina | all | 36 | 0 | 53% | 53% | 81% | 1.79 | 83% | 68% | 0.00 | 0 |
-| gnina | after cutoff | 16 | 0 | 69% | 69% | 81% | 1.25 | 82% | 86% | 0.00 | 0 |
-| vina | after cutoff | 16 | 0 | 44% | 44% | 75% | 2.77 | 83% | 57% | 0.00 | 0 |
-| boltz2 | after cutoff | 16 | 0 | 25% | 25% | 25% | 3.21 | 73% | 66% | 0.79 | 0 |
-| boltz2_pocket | after cutoff | 16 | 0 | 25% | 25% | 38% | 2.97 | 83% | 59% | 0.67 | 0 |
-| chai1 | after cutoff | 16 | 0 | 25% | 25% | 25% | 4.50 | 67% | 59% | 0.76 | 0 |
-| boltz2 | before cutoff | 20 | 0 | 95% | 95% | 100% | 0.61 | 91% | 90% | 0.33 | 0 |
-| boltz2_pocket | before cutoff | 20 | 0 | 95% | 95% | 100% | 0.55 | 92% | 91% | 0.34 | 0 |
-| chai1 | before cutoff | 20 | 0 | 85% | 85% | 90% | 0.66 | 91% | 85% | 0.45 | 0 |
-| gnina | before cutoff | 20 | 0 | 75% | 75% | 90% | 1.37 | 83% | 82% | 0.00 | 0 |
-| vina | before cutoff | 20 | 0 | 60% | 60% | 85% | 1.38 | 84% | 76% | 0.00 | 0 |
+| gnina | all | 55 | 0 | 73% | 73% | 93% | 1.18 | 85% | 84% | 0.00 | 0 |
+| boltz2_pocket | all | 55 | 0 | 71% | 67% | 76% | 0.89 | 89% | 80% | 0.42 | 0 |
+| boltz2 | all | 55 | 0 | 67% | 64% | 71% | 0.86 | 84% | 79% | 0.45 | 0 |
+| vina | all | 55 | 0 | 58% | 58% | 80% | 1.39 | 83% | 74% | 0.00 | 0 |
+| chai1 | all | 55 | 2 | 56% | 56% | 62% | 1.20 | 81% | 74% | 0.44 | 0 |
+| boltz2 | famous (pre-cutoff) | 19 | 0 | 95% | 95% | 100% | 0.61 | 91% | 92% | 0.36 | 0 |
+| boltz2_pocket | famous (pre-cutoff) | 19 | 0 | 95% | 95% | 100% | 0.48 | 92% | 92% | 0.36 | 0 |
+| chai1 | famous (pre-cutoff) | 19 | 0 | 89% | 89% | 89% | 0.63 | 92% | 86% | 0.52 | 0 |
+| gnina | famous (pre-cutoff) | 19 | 0 | 74% | 74% | 89% | 1.36 | 84% | 82% | 0.00 | 0 |
+| vina | famous (pre-cutoff) | 19 | 0 | 63% | 63% | 84% | 1.36 | 84% | 75% | 0.00 | 0 |
+| boltz2_pocket | obscure (pre-cutoff) | 21 | 0 | 81% | 71% | 81% | 0.71 | 89% | 80% | 0.37 | 0 |
+| boltz2 | obscure (pre-cutoff) | 21 | 0 | 71% | 62% | 76% | 0.86 | 82% | 74% | 0.38 | 0 |
+| gnina | obscure (pre-cutoff) | 21 | 0 | 71% | 71% | 100% | 0.97 | 89% | 86% | 0.00 | 0 |
+| vina | obscure (pre-cutoff) | 21 | 0 | 62% | 62% | 76% | 1.11 | 83% | 84% | 0.00 | 0 |
+| chai1 | obscure (pre-cutoff) | 21 | 2 | 48% | 48% | 62% | 1.64 | 78% | 71% | 0.37 | 0 |
+| gnina | after cutoff | 15 | 0 | 73% | 73% | 87% | 1.21 | 81% | 85% | 0.00 | 0 |
+| vina | after cutoff | 15 | 0 | 47% | 47% | 80% | 2.36 | 82% | 61% | 0.00 | 0 |
+| boltz2 | after cutoff | 15 | 0 | 27% | 27% | 27% | 3.16 | 78% | 71% | 0.76 | 0 |
+| boltz2_pocket | after cutoff | 15 | 0 | 27% | 27% | 40% | 2.95 | 83% | 63% | 0.64 | 0 |
+| chai1 | after cutoff | 15 | 0 | 27% | 27% | 27% | 4.39 | 72% | 63% | 0.72 | 0 |

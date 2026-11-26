@@ -31,11 +31,11 @@ x = np.arange(3)
 
 # label, values, colour, marker, linewidth, linestyle
 series = [
-    ("Boltz-2 (co-folding)", [95, 70, 27], COFOLD, "o", 2.8, "-"),
-    ("Boltz-2 pocket (co-folding)", [95, 80, 27], COFOLD_P, "o", 2.0, (0, (5, 2))),
-    ("Chai-1 (co-folding)", [85, 50, 27], COFOLD2, "o", 2.2, "-"),
-    ("GNINA (docking)", [75, 70, 73], DOCK, "s", 2.8, "-"),
-    ("AutoDock Vina (docking)", [60, 65, 47], DOCK2, "s", 2.2, "-"),
+    ("Boltz-2 (co-folding)", [95, 71, 27], COFOLD, "o", 2.8, "-"),
+    ("Boltz-2 pocket (co-folding)", [95, 81, 27], COFOLD_P, "o", 2.0, (0, (5, 2))),
+    ("Chai-1 (co-folding)", [89, 48, 27], COFOLD2, "o", 2.2, "-"),
+    ("GNINA (docking)", [74, 71, 73], DOCK, "s", 2.8, "-"),
+    ("AutoDock Vina (docking)", [63, 62, 47], DOCK2, "s", 2.2, "-"),
 ]
 
 
@@ -125,9 +125,9 @@ plt.close(fig)
 fig, ax = plt.subplots(figsize=(8, 8), dpi=100)
 fig.patch.set_facecolor(BG)
 style(ax)
-ax.plot(x, [95, 70, 27], color=COFOLD, lw=4, marker="o", ms=14, mec=BG, mew=2,
+ax.plot(x, [95, 71, 27], color=COFOLD, lw=4, marker="o", ms=14, mec=BG, mew=2,
         zorder=3)
-ax.plot(x, [75, 70, 73], color=DOCK, lw=4, marker="s", ms=13, mec=BG, mew=2,
+ax.plot(x, [74, 71, 73], color=DOCK, lw=4, marker="s", ms=13, mec=BG, mew=2,
         zorder=3)
 ax.text(-0.18, 32, "Boltz-2\nco-folding", color=COFOLD, fontsize=13,
         fontweight="bold", ha="left", va="center")

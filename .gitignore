@@ -11,3 +11,4 @@ data/raw/
 data/candidates_search*.csv
 data/candidates_recent2.csv
 logs/
+.DS_Store

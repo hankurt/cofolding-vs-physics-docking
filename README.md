@@ -30,18 +30,18 @@ and the interaction analysis connects to
 >
 > | Top-1 success | famous, pre-cut-off | obscure, pre-cut-off | after cut-off |
 > |---|---|---|---|
-> | Boltz-2 | 95% | 70% | 27% |
-> | Chai-1 | 85% | 50% | 27% |
-> | GNINA | 75% | 70% | 73% |
-> | Vina | 60% | 65% | 47% |
+> | Boltz-2 | 95% | 71% | 27% |
+> | Chai-1 | 89% | 48% | 27% |
+> | GNINA | 74% | 71% | 73% |
+> | Vina | 63% | 62% | 47% |
 >
 > Docking is flat across all three; co-folding falls monotonically. Mere
 > presence in the training set is not what drives co-folding's accuracy —
-> obscure structures from the same years cost Boltz-2 25 points. On those
-> ordinary seen structures Boltz-2 and GNINA are indistinguishable (70% each,
+> obscure structures from the same years cost Boltz-2 24 points. On those
+> ordinary seen structures Boltz-2 and GNINA are indistinguishable (71% each,
 > paired p = 1.0); on unseen ones GNINA wins (p = 0.039). Aggregated over all
-> 55 scored targets no method differs significantly from any other, so the
-> overall average hides the whole effect.
+> 55 scored targets GNINA and Boltz-2 are statistically inseparable (p = 0.65),
+> so the overall average hides the whole effect.
 >
 > Caveat first: this is re-docking into the **crystal receptor**, which favours
 > docking; see [Limitations](docs/RESULTS.md#limitations).
@@ -268,7 +268,7 @@ tests/           end-to-end tests on 6DPT
 - [x] Tests on AmpC / H7M (6DPT)
 - [x] Target building from PDB IDs with ligand checks; time-split search; before/after cut-off report
 - [x] Docking inputs (SMILES conformer, shared pocket box) and GNINA / Vina run script
-- [x] Target set: 23 classic + 20 obscure pre-cut-off + 16 post-cut-off complexes
+- [x] Target set: 22 classic + 21 obscure pre-cut-off + 16 post-cut-off complexes
 - [x] Run Boltz-2 (blind + pocket), Chai-1, GNINA and Vina ([runbook](docs/RUNBOOK.md))
 - [x] Statistics: Wilson intervals, paired McNemar tests, before/after cut-off differences
 - [x] Control: obscure pre-cut-off targets, separating "heavily represented" from merely "seen"
